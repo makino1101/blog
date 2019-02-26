@@ -1,2 +1,0 @@
-class Blogcontent < ApplicationRecord
-end

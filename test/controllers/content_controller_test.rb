@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BlogcontentTest < ActiveSupport::TestCase
+class ContentControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
