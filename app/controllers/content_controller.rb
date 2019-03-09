@@ -1,7 +1,7 @@
 class ContentController < ApplicationController
 
   def index
-    @content=Content.all
+    @content=Content.all.order("created_at DESC").page(params[:page]).per(5)
   end
 
   def new
