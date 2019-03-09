@@ -1,5 +1,18 @@
-<div class="content row">
-  <% @content.each do |content| %>
-    <p><%= content.content %></p>
-  <% end %>
-</div>
+<% @content.each do |content| %>
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-content">
+
+            <p><%= content.content %></p>
+
+        </div>
+        <div class="card-action">
+            <a href="#">SHOW</a>
+            <a href="#">EDIT</a>
+            <a href="#">DESTROY</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
