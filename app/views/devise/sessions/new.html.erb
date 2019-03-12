@@ -1,0 +1,35 @@
+
+  <h4 class="cyan-text blue-grey-text center">Log in</h4>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="row">
+      <div class="input-field col s8 offset-s2">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s8 offset-s2">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+      </div>
+    </div>
+
+    <!-- <div class="row">
+      <div class="input-field col s8 offset-s2">
+        <% if devise_mapping.rememberable? -%>
+          <%= f.label :remember_me %><br />
+          <%= f.check_box :remember_me %>
+        <% end -%>
+      </div>
+    </div> -->
+
+    <div class="center">
+      <div class="actions btn waves-effect green">
+        <%= f.submit "Log in" %>
+      </div>
+    </div>
+  <% end %>
+
+

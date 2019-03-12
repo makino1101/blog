@@ -23,3 +23,6 @@ body {
 main {
   flex: 1 0 auto;
 }
+.success {
+  margin-top: 200px;
+}

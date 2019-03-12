@@ -1,12 +1,9 @@
-
 <main>
 <div class="row">
   <div class="input-field col s8 offset-s2">
-<h4 class="cyan-text blue-grey-text">Top</h4>
+<h4 class="cyan-text blue-grey-text">MyPage : <%= @mail %></h4>
   </div>
 </div>
-
-
 <% @content.each do |content| %>
   <div class="row">
     <div class="col s8 offset-s2">
@@ -18,16 +15,10 @@
         </div>
         <div class="card-action right-align">
 
-                <%= link_to 'SHOW', "/blog/#{content.id}", method: :get %>
+                <%= link_to 'EDIT', "/blog/#{content.id}/edit", method: :get %>
 
-              <% if user_signed_in? && current_user.id == content.user_id %>
+                <%= link_to 'DELETE', "/blog/#{content.id}", method: :delete %>
 
-                  <%= link_to 'EDIT', "/blog/#{content.id}/edit", method: :get %>
-
-
-                  <%= link_to 'DELETE', "/blog/#{content.id}", method: :delete %>
-
-              <% end %>
         </div>
       </div>
     </div>

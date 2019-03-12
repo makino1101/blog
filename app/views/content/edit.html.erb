@@ -1,0 +1,17 @@
+<main>
+<div class="row">
+  <div class="input-field col s8 offset-s2">
+    <%= form_tag("/blog/#{@content.id}",method: :patch) do %>
+      <h4 class="cyan-text blue-grey-text">
+        Edit
+      </h4>
+      <textarea class="materialize-textarea" cols="30" name="content" placeholder="content" rows="10">
+        <%= @content.content %>
+      </textarea>
+      <div class="right">
+        <input type="submit" class="btn waves-effect green" value="SENT">
+      </div>
+    <% end %>
+  </div>
+</div>
+</main>
