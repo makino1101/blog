@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   patch 'blog/:id'  => 'content#update'
   get 'blog/:id'      => 'content#show'
   get 'users/:id'      => 'users#show'
+
+
 end
